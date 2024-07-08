@@ -1,19 +1,9 @@
 const path = require('path');
+let name = "app";
 module.exports={
-  entry:"./src/app.ts",
+  entry:`./src/${name}.js`,
   output:{
     path:path.resolve(__dirname,"dist"),
-    filename:"add.bundle.js"
-  },
-  mode:'development',
-  module:{
-    rules:[{
-      test:/\.ts$/,
-      use:'ts-loader',
-      exclude: /node-modules/
-    }]
-  },
-  resolve:{
-    extensions:[".ts",".js"]
+    filename:"app.bundle.js"
   }
 }
